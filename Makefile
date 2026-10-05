@@ -8,7 +8,9 @@ FLASH_OPTS = -c stlinkv2 -p stm8s003f3
 SRC_DIR    = src
 SRCS       = $(SRC_DIR)/main.c \
              $(SRC_DIR)/i2c.c  \
-             $(SRC_DIR)/oled.c
+             $(SRC_DIR)/oled.c \
+             $(SRC_DIR)/timer.c\
+             $(SRC_DIR)/traffic.c
 OBJS       = $(SRCS:.c=.rel)
 
 TARGET     = main.ihx

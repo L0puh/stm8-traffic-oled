@@ -35,11 +35,11 @@ static uint8_t scale_vertically(uint8_t n)
 // send cmd: start -> addr -> control bit -> cmd -> stop
 void oled_cmd(uint8_t cmd)
 {
-   i2c_start();
-   i2c_write(OLED_ADDR);
-   i2c_write(0x00);
-   i2c_write(cmd);
-   i2c_stop();
+    i2c_start();
+    i2c_write(OLED_ADDR);
+    i2c_write(0x00);
+    i2c_write(cmd);
+    i2c_stop();
 }
 
 void oled_draw_symbol(uint8_t x, uint8_t y, char c)
@@ -64,7 +64,7 @@ void oled_draw_symbol(uint8_t x, uint8_t y, char c)
 
       i2c_write(0x00);
       i2c_write(0x00);
-      i2c_stop();
+      oled_data_stop();
    }
 }
 
@@ -88,10 +88,14 @@ void oled_clear(void)
       oled_data_begin();
       for (i = 0; i < 128; i++)
          i2c_write(0x00);
-      i2c_stop();
+      oled_data_stop();
    }
 }
 
+void oled_data_stop(void)
+{
+   i2c_stop();
+}
 
 void oled_data_begin(void)
 {

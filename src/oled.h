@@ -34,5 +34,6 @@ void oled_cmd(uint8_t cmd);
 void oled_data_begin(void);
 void oled_draw_symbol(uint8_t x, uint8_t y, char c);
 void oled_draw_string(uint8_t x, uint8_t y, const char* str);
+void oled_data_stop(void);
 
 #endif 

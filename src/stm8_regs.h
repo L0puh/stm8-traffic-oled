@@ -34,5 +34,18 @@
 #define PD_CR2  REG(0x5013)
 
 #define CLK_CKDIVR  REG(0x50C6)
+#define TIM4_CR1   REG(0x5340)
+#define TIM4_IER   REG(0x5343)
+#define TIM4_SR    REG(0x5344)
+#define TIM4_EGR   REG(0x5345)
+#define TIM4_CNTR  REG(0x5346)
+#define TIM4_PSCR  REG(0x5347)
+#define TIM4_ARR   REG(0x5348)
 
+#define ADC_CSR     REG(0x5400)
+#define ADC_CR1     REG(0x5401)
+#define ADC_CR2     REG(0x5402)
+#define ADC_CR3     REG(0x5403)
+#define ADC_DRH     REG(0x5404)
+#define ADC_DRL     REG(0x5405)
 #endif

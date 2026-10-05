@@ -22,7 +22,6 @@ static inline void led_init(void)
    PC_CR1 |= LED_MASK;
    PC_CR2 &= ~LED_MASK;
 
-   CLK_CKDIVR = 0x00; //16MHz;
 }
 
 #endif 
